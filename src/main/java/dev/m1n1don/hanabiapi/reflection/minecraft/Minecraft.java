@@ -83,7 +83,7 @@ public class Minecraft
         },
 
         v1_12_R1(11201),
-        v1_16_R1(11601);
+        v1_16_R3(11603);
 
         private int version;
 

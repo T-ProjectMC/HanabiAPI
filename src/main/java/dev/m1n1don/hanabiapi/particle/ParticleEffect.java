@@ -40,7 +40,7 @@ public enum ParticleEffect
     DRIP_LAVA("dripLava"),
     VILLAGER_ANGRY("angryVillager"),
     VILLAGER_HAPPY("happyVillager"),
-    REDSTONE("reddust", v1_16_R1, Feature.COLOR),
+    REDSTONE("reddust", v1_16_R3, Feature.COLOR),
     TOWN_AURA("townaura"),
     PORTAL("portal"),
     ENCHANTMENT_TABLE("enchantmenttable"),
@@ -76,14 +76,14 @@ public enum ParticleEffect
             throw new ParticleException("Cannot use default send() for ITEM_CRACK");
         }
     },
-    WATER_DROP("droplet", v1_16_R1),
-    ITEM_TAKE("take", v1_16_R1),
-    MOB_APPEARANCE("mobappearance", v1_16_R1),
-    DRAGON_BREATH("dragonbreath", v1_16_R1),
-    END_ROD("endRod", v1_16_R1),
-    DAMAGE_INDICATOR("damageIndicator", v1_16_R1),
-    SWEEP_ATTACK("sweepAttack", v1_16_R1),
-    FALLING_DUST("fallingDust", v1_16_R1);
+    WATER_DROP("droplet", v1_16_R3),
+    ITEM_TAKE("take", v1_16_R3),
+    MOB_APPEARANCE("mobappearance", v1_16_R3),
+    DRAGON_BREATH("dragonbreath", v1_16_R3),
+    END_ROD("endRod", v1_16_R3),
+    DAMAGE_INDICATOR("damageIndicator", v1_16_R3),
+    SWEEP_ATTACK("sweepAttack", v1_16_R3),
+    FALLING_DUST("fallingDust", v1_16_R3);
 
     private   String            name;
     private   Minecraft.Version minVersion;
@@ -106,7 +106,7 @@ public enum ParticleEffect
 
     ParticleEffect(String name)
     {
-        this(name, v1_16_R1);
+        this(name, v1_16_R3);
     }
 
     public String getName()
@@ -391,8 +391,7 @@ public enum ParticleEffect
                     float.class,
                     float.class,
                     int.class,
-                    int[].class }).newInstance(
-                    getEnum(EnumParticle.getName() + "." + effect.name()),
+                    int[].class }).newInstance(getEnum(EnumParticle.getName() + "." + effect.name()),
                     true,
                     (float) x,
                     (float) y,

@@ -62,6 +62,7 @@ public class ConstructorResolver extends MemberResolver<Constructor>
         catch (ReflectiveOperationException e) { throw (NoSuchMethodException) e; }
     }
 
+
     @Override
     protected Constructor resolveObject(ResolverQuery query)
     {

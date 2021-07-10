@@ -1,0 +1,4 @@
+name: HanabiAPI
+version: ${project.version}
+main: dev.m1n1don.hanabiapi.HanabiAPI
+api-version: 1.16
