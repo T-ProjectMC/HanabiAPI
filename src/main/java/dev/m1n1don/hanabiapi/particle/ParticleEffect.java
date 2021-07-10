@@ -40,6 +40,7 @@ public enum ParticleEffect
     DRIP_LAVA("dripLava"),
     VILLAGER_ANGRY("angryVillager"),
     VILLAGER_HAPPY("happyVillager"),
+    REDSTONE("reddust", v1_16_R1, Feature.COLOR),
     TOWN_AURA("townaura"),
     PORTAL("portal"),
     ENCHANTMENT_TABLE("enchantmenttable"),
